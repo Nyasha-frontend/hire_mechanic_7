@@ -1,0 +1,218 @@
+/* Card Styles for Hero3 */
+.card {
+    width: 100%;
+   
+    height: 550px; /* Increased height */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 30px;
+    position: relative;
+ 
+    
+    background-clip: padding-box;
+
+     /* Gradient Border */
+     border: 12px solid transparent; /* Required for border-image */
+     border-image: linear-gradient(135deg, #f69d07, #0561b4) 1;
+     background-clip: padding-box; /* Ensures background doesn't leak under the border */
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+   border-image: linear-gradient(135deg, #f69d07, #0561b4) 1;
+    border-image-slice: 1;
+  }
+  
+  .cardImageContainer {
+    width: 100%;
+    height: 200px; /* Increased height for image */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover .cardImage {
+    transform: scale(1.1);
+  }
+  
+  /* .cardContent {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  } */
+  
+  .cardTitle {
+    font-size: 1.5rem; 
+    font-weight: bold;
+    color: #0561b4; 
+    margin-bottom: 15px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .card:hover .cardTitle {
+    color: #f69d07; 
+  }
+  
+  /* .cardDescription {
+    font-size: 0.9rem;
+    color: #ec0f0f; 
+    line-height: 1.6; 
+    text-align: left;
+    transition: color 0.3s ease-in-out;
+  margin-top: -300px;
+    overflow: hidden; 
+    position: relative;
+  }
+   */
+  .cardDescription.expanded {
+    max-height: none; 
+  }
+  /* Add these to your existing CSS */
+.card {
+  /* Your existing card styles */
+  position: relative; /* For button positioning */
+}
+
+.cardContent {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cardDescription {
+  font-size: 20px !important; /* Force larger text */
+  line-height: 1.5;
+  margin-top: -10px; /* Pull text upward */
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+  margin-top: auto; /* Push buttons to bottom */
+}
+
+.knowMoreButton {
+  background: #0561b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+}
+
+.readMoreButton {
+  background: transparent;
+  color: #0561b4;
+  border: 1px solid #0561b4;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+  .learnMoreButton {
+    background: linear-gradient(135deg, #f69d07, #0561b4);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .learnMoreButton:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .card {
+      max-width: 100%; /* Full width on smaller screens */
+      height: auto; /* Auto height for responsiveness */
+    }
+  
+    .cardImageContainer {
+      height: 150px; /* Adjusted height for smaller screens */
+    }
+  
+    .cardTitle {
+      font-size: 1.3rem; /* Slightly smaller font size */
+    }
+  
+    .cardDescription {
+      font-size: 0.85rem; /* Slightly smaller font size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cardImageContainer {
+      height: 120px; /* Adjusted height for mobile */
+    }
+  
+    .cardTitle {
+      font-size: 1.2rem; /* Smaller font size for mobile */
+    }
+  
+    .cardDescription {
+      font-size: 0.8rem; /* Smaller font size for mobile */
+    }
+  }
+  /* Add this to your existing CSS */
+.card {
+  /* Your existing card styles */
+  opacity: 0; /* Initial state for animation */
+}
+
+.readMoreButton {
+  background: linear-gradient(135deg, #f69d07, #0561b4);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: transform 0.3s ease-in-out;
+  align-self: center;
+}
+
+.readMoreButton:hover {
+  transform: scale(1.05);
+}
+
+/* Adjust the cardDescription to fix the margin issue */
+.cardDescription {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+  text-align: left;
+  margin-top: 15px; /* Fixed the negative margin */
+  overflow: hidden;
+  position: relative;
+  max-height: 100px; /* Limit height for read more functionality */
+  transition: max-height 0.3s ease;
+}
+
+.cardDescription.expanded {
+  max-height: 500px; /* Adjust based on your content needs */
+}
