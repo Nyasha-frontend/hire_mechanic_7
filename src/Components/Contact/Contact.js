@@ -17,24 +17,44 @@ const Contact = () => {
         <h3>Need Our Help?</h3>
         <div className={styles.infoContent}>
           <div className={styles.infoImage}>
-            {/* <img src={contactUsIllustration} alt="contactUsIllustration" /> */}
+          
           </div>
           <div className={styles.i}>
-            <p>Let us know how we can assist you — from service bookings to general support, we’re always ready to help.</p>
+            <p>
+              Let us know how we can assist you — from service bookings to
+              general support, we’re always ready to help.
+            </p>
             <ul className={styles.helpList}>
-              <li><span>✔</span> Book a mechanic at your location – home, office, or roadside.</li>
-              <li><span>✔</span> Understand our service plans and pricing clearly.</li>
-              <li><span>✔</span> Get 24/7 emergency breakdown assistance when stranded.</li>
-              <li><span>✔</span> Track your ongoing service and get real-time updates.</li>
-              <li><span>✔</span> Get expert advicee on any vehicle issue or concern.</li>
-              <li><span>✔</span> Share your feedback to help us improve your experience.</li>
+              <li>
+                <span>✔</span> Book a mechanic at your location – home, office,
+                or roadside.
+              </li>
+              <li>
+                <span>✔</span> Understand our service plans and pricing clearly.
+              </li>
+              <li>
+                <span>✔</span> Get 24/7 emergency breakdown assistance when
+                stranded.
+              </li>
+              <li>
+                <span>✔</span> Track your ongoing service and get real-time
+                updates.
+              </li>
+              <li>
+                <span>✔</span> Get expert advicee on any vehicle issue or
+                concern.
+              </li>
+              <li>
+                <span>✔</span> Share your feedback to help us improve your
+                experience.
+              </li>
             </ul>
           </div>
         </div>
       </div>
 
       <div className={styles.formContainer}>
-        <ContactForm/>
+        <ContactForm />
       </div>
     </>
   );

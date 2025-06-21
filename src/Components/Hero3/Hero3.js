@@ -24,21 +24,21 @@ const services = [
     image: carrepair,
   },
   {
-    title: "Preventative Maintenance",
+    title: "Tire & Alignment Care",
     description:
-      "The best way to minimize breakdowns is doing routine maintenance.",
+      "Ensure a safe and smooth drive with precision balancing and alignment.",
     image: carrepair,
   },
   {
-    title: "Cleaning & Shine",
+    title: "Full Vehicle Inspection",
     description:
-      "Try our Cleaning & Shine package that is very pocket-friendly.",
+      "A thorough multi-point check to keep your vehicle in top condition.",
     image: carrepairtwo,
   },
   {
-    title: "Wheel Works",
+    title: "Engine Health Check",
     description:
-      "We offer all types of Wheel care solutions to our clients.",
+      "Detect issues early and extend your engine’s life with expert diagnostics.",
     image: carrepair,
   },
 ];

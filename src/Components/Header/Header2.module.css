@@ -43,3 +43,8 @@
         transform: translateX(-100%); /* Move to the left */
     }
 }
+
+.span{
+    padding: 25px;
+    
+}

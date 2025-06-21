@@ -6,17 +6,19 @@ import styles from './PartnerHero2.module.css'; // Assuming you have a CSS modul
 
 const services = [
   {
-    
+    id: "dolphin-car-spa",
     title: "Dolphin Car Spa",
     description: " Comprehensive Car Care Services",
-    
     image: dolphincarlogosquare,
+    link: "/partner/dolphin-car-spa",
     
   },
   {
+    id: "ss-automobiles",
     title: "SS Automobiles",
     description: "Try our Cleaning & Shine package that is very pocket-friendly.",
     image: carrepairtwo,
+    link: "/partner/ss-automobiles",
   },
   
 ];
@@ -31,9 +33,11 @@ const PartnerHero2 = () => {
         {services.map((service, index) => (
           <Card
             key={index}
+            id={service.id}
             title={service.title}
             description={service.description}
             image={service.image}
+            link={service.link}
           />
         ))}
       </div>

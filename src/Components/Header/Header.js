@@ -106,10 +106,10 @@ const Header = () => {
                 <FontAwesomeIcon icon={faChevronDown} className={styles.icon} />
               </Link>
               <div className={styles.dropdownMenu}>
-                <Link to="/service-1">Hire Mechanic</Link>
-                <Link to="/service-2">Get Hired</Link>
-                <Link to="/service-3">Get Franchise</Link>
-                <Link to="/service-4">Insurance Claim</Link>
+                <Link to="/hire-mechanic">Hire Mechanic</Link>
+                <Link to="/get-hired">Get Hired</Link>
+                <Link to="/get-franchise">Get Franchise</Link>
+                <Link to="/insurance-claim">Insurance Claim</Link>
               </div>
             </li>
             <li>

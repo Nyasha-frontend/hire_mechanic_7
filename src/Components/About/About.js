@@ -13,7 +13,7 @@ const About = () => {
     <div className={styles.aboutContainer}>
       <h2> About Us</h2>
       {/* Hero Section */}
-      <div className={styles.heroSection}>
+      <div className={styles.heroSection}>   
         <div className={styles.heroContent}>
           <h1> Hire Mechanic</h1>
           <p>

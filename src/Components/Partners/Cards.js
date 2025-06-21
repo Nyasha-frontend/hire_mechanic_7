@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styles from "../Partners/Cards.module.css";
 import partners from "../../assets/partners.jpg";
+import { useNavigate } from "react-router-dom";
 
-const Cards = ({ title, description, image }) => {
+const Cards = ({id, title, description, image, link }) => {
+  const navigate = useNavigate();
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => {
@@ -11,7 +13,8 @@ const Cards = ({ title, description, image }) => {
   };
 
   const handleKnowMore = () => {
-    window.open("/know-more", "_blank"); // Will open in new tab
+    navigate(link);
+    // window.open("/know-more", "_blank"); // Will open in new tab
     // Alternative: use navigate if using React Router
     // navigate('/know-more');
   };

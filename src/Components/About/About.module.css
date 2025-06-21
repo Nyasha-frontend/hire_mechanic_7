@@ -43,9 +43,8 @@
 }
 
 .heroContent p {
-    width: 600px;
+     max-width: 100%;
     text-align: justify;
-    height: auto;
     font-size: 1.1rem;
     color: #000102;
 }
@@ -69,13 +68,14 @@
 .heroImage::before {
     content: '';
     position: absolute;
-    top: -20px;
-    left: -20px;
+    top: -18px;
+    left: -18px;
     border-radius: 100px;
-    border: 500px solid #f69d07;
-    animation: rotateBorder 1s linear , distortBorder 2s ease-in-out infinite alternate;
+    border: 10px solid #f69d07;
+    animation: distortBorder 2s ease-in-out infinite alternate;
     z-index: 0;
 }
+
 
 @keyframes rotateBorder {
     0% { transform: rotate(0deg); }
@@ -87,6 +87,12 @@
     50% { border-width: 24px; border-color: #ff6b6b; }
     100% { border-width: 8px; border-color: #f69d07; }
 }
+
+
+
+
+
+/* ===================== */
 
 /* Mission Section - unchanged */
 .missionSection {
@@ -434,33 +440,28 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .heroSection, .missionSection {
-        flex-direction: column;
-        text-align: center;
-    }
+@media (max-width: 767px) {
+  .heroSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    .heroContent, .missionContent {
-        max-width: 100%;
-        margin-bottom: 2rem;
-    }
+  .heroContent,
+  .heroImage {
+    max-width: 100%;
+    width: 100%;
+    margin: 20px 0;
+  }
 
-    .heroImage img, .missionImage img {
-        max-width: 100%;
-    }
+  .heroContent p {
+    padding: 0 15px;
+  }
 
-    .whatWeDoSection h2::after,
-    .whyChooseUsSection h2::before,
-    .whyChooseUsSection h2::after {
-        display: none;
-    }
-
-    .gridContainer {
-        grid-template-columns: 1fr;
-    }
-
-    .whyChooseUsSection .gridItem {
-        height: auto;
-        padding: 1.5rem;
-    }
+  .heroImage img {
+    width: 90%;
+    height: auto;
+    border-radius: 80px;
+  }
 }
+
